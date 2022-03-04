@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "d4c7cd10-d062-4f91-abdb-feae3f1cc3f4",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44359/api/Product/GetAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44359",
+							"path": [
+								"api",
+								"Product",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"sku\": \"000002\",\r\n        \"name\": \"Plate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44359/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44359",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Sku\" : \"000001\",\r\n    \"Name\": \"Bowl2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44359/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44359",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44359/api/Product?sku=000004",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44359",
+							"path": [
+								"api",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "sku",
+									"value": "000004"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44359/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44359",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"Sku\": \"000001\",\r\n        \"Quantity\": 1\r\n    },\r\n    {\r\n        \"Sku\": \"000002\",\r\n        \"Quantity\": 1\r\n    },\r\n    {\r\n        \"Sku\": \"000003\",\r\n        \"Quantity\": 1\r\n\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44359/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44359",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatus",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

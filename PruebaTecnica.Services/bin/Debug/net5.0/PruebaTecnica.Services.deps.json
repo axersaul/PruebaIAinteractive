@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PruebaTecnica.Services/1.0.0": {
+        "runtime": {
+          "PruebaTecnica.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PruebaTecnica.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

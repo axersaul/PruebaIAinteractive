@@ -1,0 +1,107 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Prueba IA Interactive";
+}
+
+<section class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+            <ul id="tabs" class="nav nav-tabs">
+                <li class="nav-item"><a href="" data-target="#pending" data-toggle="tab" class="nav-link small text-uppercase">Pending</a></li>
+                <li class="nav-item"><a href="" data-target="#inProcess" data-toggle="tab" class="nav-link small text-uppercase active">in Process</a></li>
+                <li class="nav-item"><a href="" data-target="#completed" data-toggle="tab" class="nav-link small text-uppercase">Completed</a></li>
+                <li class="nav-item"><a href="" data-target="#Delivered" data-toggle="tab" class="nav-link small text-uppercase">Delivered</a></li>
+                <li class="nav-item"><a href="" data-target="#Canceled" data-toggle="tab" class="nav-link small text-uppercase">Canceled</a></li>
+            </ul>
+            <br>
+            <div id="tabsContent" class="tab-content">
+                <div id="pending" class="tab-pane fade">
+                    <div class="list-group" id="ListPending">
+                        <div class="card" style="width: 18rem; margin: 5rem;" ng-repeat="(index,value) in pendingList">
+                            <div class="card-body">
+                                <h5 class="card-title">Order # {{value.id}} </h5>
+                                <hr />
+                                Products
+                                <hr />
+                                <ul>
+                                    <li ng-repeat="elemento in value.details">
+                                        {{elemento.product.name}}   x {{elemento.quantity}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="inProcess" class="tab-pane fade">
+                    <div class="list-group" id="ListProcess">
+                        <div class="card" style="width: 18rem; margin: 5rem;" ng-repeat="(index,value) in listInProcess">
+                            <div class="card-body">
+                                <h5 class="card-title">Order # {{value.id}}</h5>
+                                <hr />
+                                Products
+                                <hr />
+                                <ul>
+                                    <li ng-repeat="elemento in value.details">
+                                        {{elemento.product.name}}   x {{elemento.quantity}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="completed" class="tab-pane fade">
+                    <div class="list-group" id="ListCompleted">
+                        <div class="card" style="width: 18rem; margin: 5rem;" ng-repeat="(index,value) in listCompleted">
+                            <div class="card-body">
+                                <h5 class="card-title">Order # {{value.id}}</h5>
+                                <hr />
+                                Products
+                                <hr />
+                                <ul>
+                                    <li ng-repeat="elemento in value.details">
+                                        {{elemento.product.name}}   x {{elemento.quantity}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Delivered" class="tab-pane fade">
+                    <div class="list-group" id="ListDelivered">
+                        <div class="card" style="width: 18rem; margin: 5rem;" ng-repeat="(index,value) in listDelivered">
+                            <div class="card-body">
+                                <h5 class="card-title">Order # {{value.id}}</h5>
+                                <hr />
+                                Products
+                                <hr />
+                                <ul>
+                                    <li ng-repeat="elemento in value.details">
+                                        {{elemento.product.name}}   x {{elemento.quantity}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Canceled" class="tab-pane fade">
+                    <div class="list-group" id="ListCanceled">
+                        <div class="card" style="width: 18rem; margin: 5rem;" ng-repeat="(index,value) in listCanceled">
+                            <div class="card-body">
+                                <h5 class="card-title">Order # {{value.id}}</h5>
+                                <hr />
+                                Products
+                                <hr />
+                                <ul>
+                                    <li ng-repeat="elemento in value.details">
+                                        {{elemento.product.name}}   x {{elemento.quantity}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
